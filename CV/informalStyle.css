@@ -1,0 +1,205 @@
+* {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+    color: #E5D0CCCE;
+}
+
+body {
+    background: linear-gradient(to top, #051923 0%, #003554 50%, #051923 100%);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+h1, h2 {
+    color: #E5D0CC;
+    font-size: 1.5rem;
+}
+
+.about {        
+    margin: 2rem 0;
+}
+
+.navbar {
+    background: url('images/gifs/starryNight.svg');
+    background-size: cover;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0rem .3rem .5rem .3rem rgba(0, 0, 0, .5);
+    transition: border-radius .3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: opacity .3s ease-in-out, border-radius .3s ease-in-out;
+    background: '';
+    opacity: 0%;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 0;
+    padding: 0 2.5rem;
+}
+
+#navbarLogo {
+    color: #E5D0CE;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbarMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbarLinks {
+    color: #227C9D;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0;
+    height: 100%;
+}
+
+.navbarButton {
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    background: #FE6D73;
+    color: black;
+}
+
+.button:hover {
+    background: #17C3B2;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarLinks:hover {
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.mainContainer {
+    margin: 1rem 0;
+}
+
+.aboutText, .experienceText {
+    margin: 0 1rem;
+    text-align: left; 
+}
+
+.experience {
+    display: grid;
+}
+
+#experienceImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-image: url('images/gifs/imgContainer.svg');
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: thick solid #0d0123;
+    margin: 1rem 0 0 calc(50vw - 25rem);
+    width: 50rem;
+    z-index: 1;
+    box-shadow: .3rem 0 .3rem 0 rgba(0, 0, 0, .5), -.3rem 0 .3rem 0 rgba(0, 0, 0, .5);
+}
+
+.outsideImgContainer {
+    margin: 1rem 3.8rem;
+}
+
+.insideImgContainer {
+    position: relative;
+}
+
+.insideImgContainer img {
+    position: relative;
+    cursor: pointer;
+    height: 20rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: .4rem;
+    border-color:#553d5e;
+    transition: transform .3s ease-in-out;
+}
+
+.insideImgContainer img:hover {
+    transform: scale(1.2);
+    z-index: 12;
+}
+
+.insideImgContainer::after {
+    transition: background-color .3s ease-in-out;
+}
+
+.insideImgContainer:hover::after{
+    pointer-events: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 11;
+}
+
+.link {
+    text-decoration: none;
+    padding: .1rem .5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    background-color: #FE6D73;
+    color: black;
+    width: 50rem;
+    margin-left: calc(50vw - 25rem);
+    text-align: center;
+    box-shadow: .3rem 0 .3rem 0 rgba(0, 0, 0, .5), -.3rem 0 .3rem 0 rgba(0, 0, 0, .5);
+}
+
+.link:hover {
+    background: #17C3B2;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
